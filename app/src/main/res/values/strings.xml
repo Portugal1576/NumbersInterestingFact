@@ -9,4 +9,6 @@
     <string name="enter_number">Enter the number</string>
     <string name="back">Back</string>
     <string name="delete">Delete</string>
+    <string name="add">Add</string>
+    <string name="some_details__number">Some details of the number</string>
 </resources>

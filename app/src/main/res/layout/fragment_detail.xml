@@ -11,22 +11,37 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center_horizontal"
+        android:layout_margin="@dimen/margin_small"
         android:padding="@dimen/margin_small"
         android:textAppearance="@style/TextAppearance.AppCompat.Title"
         android:textColor="@color/black"
         android:textSize="28sp"
-        tools:text="Number" />
+        android:text="@string/number" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/margin_mini"
+        android:layout_margin="@dimen/margin_small"
+        android:background="@color/blue"/>
 
     <TextView
         android:id="@+id/tv_number_detail"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center_horizontal"
+        android:layout_margin="@dimen/margin_small"
         android:padding="@dimen/margin_small"
         android:textColor="@color/blue"
         android:textSize="18sp"
         android:textStyle="italic"
-        tools:text="Some details of the number" />
+        android:text="@string/some_details__number" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/margin_mini"
+        android:layout_margin="@dimen/margin_small"
+        android:background="@color/blue"/>
+
     <FrameLayout
         android:layout_margin="@dimen/margin_small"
         android:layout_width="match_parent"
@@ -42,19 +57,33 @@
             tools:ignore="RtlHardcoded"
             android:layout_marginBottom="10dp"
             android:layout_marginRight="10dp"
-            android:backgroundTint="@color/blue"/>
+            android:backgroundTint="@color/blue_light"/>
 
         <com.google.android.material.floatingactionbutton.FloatingActionButton
             android:id="@+id/btn_delete"
+            android:visibility="visible"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="end"
             android:contentDescription="@string/delete"
-            android:src="@drawable/ic_baseline_delete_24"
+            android:src="@drawable/ic_baseline_add_to_photos_24"
             tools:ignore="RtlHardcoded"
             android:layout_marginBottom="10dp"
             android:layout_marginRight="10dp"
-            android:backgroundTint="@color/red"/>
+            android:backgroundTint="@color/red_light"/>
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/btn_add"
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:contentDescription="@string/delete"
+            android:src="@drawable/ic_baseline_add_to_photos_24"
+            tools:ignore="RtlHardcoded"
+            android:layout_marginBottom="10dp"
+            android:layout_marginRight="10dp"
+            android:backgroundTint="@color/red_light"/>
 
     </FrameLayout>
 

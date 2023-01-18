@@ -30,5 +30,9 @@ class DetailFragment : Fragment() {
             APP.navController.navigate(R.id.action_detailFragment_to_startFragment)
 //            TODO
         }
+        binding.btnAdd.setOnClickListener {
+            APP.navController.navigate(R.id.action_detailFragment_to_startFragment)
+//            TODO
+        }
     }
 }
