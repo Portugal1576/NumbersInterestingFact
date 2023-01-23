@@ -5,7 +5,7 @@ import retrofit2.http.Path
 
 interface NumbersService {
 
-    @GET("/{number}")
+    @GET("/{number}/math")
     suspend fun getFactNumber(
         @Path("number") number: String
     ): String
