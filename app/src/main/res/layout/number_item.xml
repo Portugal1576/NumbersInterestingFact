@@ -29,6 +29,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center_horizontal"
+            android:padding="@dimen/margin_small"
+            android:maxLines="1"
             android:paddingTop="@dimen/margin_small"
             android:text="@string/detail"
             android:textColor="@color/black"

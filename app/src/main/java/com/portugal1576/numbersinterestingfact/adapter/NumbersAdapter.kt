@@ -7,12 +7,14 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.portugal1576.numbersinterestingfact.R
 import com.portugal1576.numbersinterestingfact.model.NumberFact
+import com.portugal1576.numbersinterestingfact.ui.screens.start.StartFragment
 import kotlinx.android.synthetic.main.number_item.view.*
 
 
 class NumbersAdapter : RecyclerView.Adapter<NumbersAdapter.NumbersViewHolder>() {
 
     private var listNumbers = emptyList<NumberFact>()
+
 
     class NumbersViewHolder(view: View) : RecyclerView.ViewHolder(view)
 
@@ -28,6 +30,17 @@ class NumbersAdapter : RecyclerView.Adapter<NumbersAdapter.NumbersViewHolder>() 
 
     override fun getItemCount(): Int {
         return listNumbers.size
+    }
+
+    override fun onViewAttachedToWindow(holder: NumbersViewHolder) {
+        super.onViewAttachedToWindow(holder)
+        holder.itemView.setOnClickListener {
+            StartFragment.clickFact(listNumbers[holder.adapterPosition])
+        }
+    }
+
+    override fun onViewDetachedFromWindow(holder: NumbersViewHolder) {
+        holder.itemView.setOnClickListener(null)
     }
 
     @SuppressLint("NotifyDataSetChanged")
